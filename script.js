@@ -12,3 +12,14 @@ const checkForPalindrome = input => {
     alert('Please input a value');
     return;
   }
+  // Commit: Remove the previous result
+  resultDiv.replaceChildren();
+
+  // Commit: Clean and prepare the input for palindrome check
+  const lowerCaseStr = input.replace(/[^A-Za-z0-9]/gi, '').toLowerCase();
+
+  // Commit: Determine if the input is a palindrome and create result message
+  let resultMsg = `<strong>${originalInput}</strong> ${
+    lowerCaseStr === [...lowerCaseStr].reverse().join('') ? 'is' : 'is not'
+  } a palindrome.`;
+
