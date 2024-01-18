@@ -40,3 +40,13 @@ checkPalindromeBtn.addEventListener('click', () => {
   userInput.value = '';
 });
 
+// Commit: Event listener for pressing the "Enter" key in the input field
+userInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      // Commit: Call the checkForPalindrome function with the user input
+      checkForPalindrome(userInput.value);
+      // Commit: Clear the user input field
+      userInput.value = '';
+    }
+  });
+
