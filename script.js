@@ -22,4 +22,21 @@ const checkForPalindrome = input => {
   let resultMsg = `<strong>${originalInput}</strong> ${
     lowerCaseStr === [...lowerCaseStr].reverse().join('') ? 'is' : 'is not'
   } a palindrome.`;
+  // Commit: Create and append a paragraph element with the result message
+  const pTag = document.createElement('p');
+  pTag.className = 'user-input';
+  pTag.innerHTML = resultMsg;
+  resultDiv.appendChild(pTag);
+
+  // Commit: Show the result by removing the 'hidden' class
+  resultDiv.classList.remove('hidden');
+};
+
+// Commit: Event listener for the "Check" button click
+checkPalindromeBtn.addEventListener('click', () => {
+  // Commit: Call the checkForPalindrome function with the user input
+  checkForPalindrome(userInput.value);
+  // Commit: Clear the user input field
+  userInput.value = '';
+});
 
