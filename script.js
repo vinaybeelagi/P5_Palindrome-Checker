@@ -22,4 +22,32 @@
     justify-content: center;
     flex-direction: column;
   }
+  .freecodecamp-logo {
+    height: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Commit: Style the title and freeCodeCamp logo */
+  
+  .palindrome-div {
+    width: min(100vw, 450px);
+    min-height: 100px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: white;
+    box-shadow: 0 6px 6px #002ead;
+  }
+  
   
